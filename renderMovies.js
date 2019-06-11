@@ -1,8 +1,38 @@
 
 function renderMovies(movies) {
+    var result = movies.map(element => {
+        return createMovie(element)
+    }).join("")
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
+            ${result}
+
+        </div>
+    `
+}
+
+function createMovie(movie){
+    movie_poster = createPoster(movie)
+    //alert(movie_poster);
+    movie_content = createContent(movie)
+    return `<div class="movie-container">${movie_poster} ${movie_content}</div>`
+}
+
+function createPoster(movie) {
+    return `<div class="movie-poster"><img src="${movie.poster}"></img></div>`
+}
+
+function createContent(movie) {
+    return `
+        <div class="movie-content" id="${movie.imdbID}">
+            <h1>${movie.title}</h1>
+            <p>${movie.year}</h1>
+
+            <h2>IMDB:</h2>
+            <h3>${movie.imdbRating}</h3>
+
+            <h2>Rotten Tomattos:</h2>
+            <h3>${movie.rottenTomatoesRating}</h3>
         </div>
     `
 }
