@@ -1,10 +1,50 @@
 
 function renderSurveys(surveys) {
+    result = surveys.map(element => {
+        return createSurvey(element);
+    }).join("")
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(surveys)}</code>
+            ${result}
         </div>
     `
+}
+
+
+function createSurvey(survey){
+    fields = createField(survey.fields)
+    return `<div class="survey">
+            <h1>${survey.title}</h1>
+            <hr>
+            <div>${fields}</div>
+            <button class='btn btn-primary'>${survey.submitButtonText}</button>
+            </div>`
+}
+
+function createField(fields) {
+    var input_group = ''
+    fields = fields.map(element => {
+        if (element.type == 'radio'){
+            input_group = createRadio(element.options)
+        }
+        else {
+            input_group = `<input type="text" class="inputbox" name="fname">`
+        }
+        return `<div class="field"><h3>${element.label}</h3>
+                <div>${input_group}</div></div>      
+                `
+
+    }).join("")
+    return fields
+}
+
+function createRadio(radio) {
+    options = radio.map(element => {
+        return `<input type="radio" name="${element}" id="option${element}">${element}<br>`
+    }).join("");
+    return `<div class="rado">
+            ${options}
+            </div>`
 }
 
 function surveys() {

@@ -1,1 +1,264 @@
 /* Type whatever CSS you need here! */
+
+.main {
+    background: RGBA(204, 153, 0, 0.1);
+    padding: 3%;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    display: inline;
+}
+
+.play-icon {
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+    margin-right: 20px;
+}
+
+
+.main table {
+    width: 100%;
+}
+
+.main table td {
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.main table tr {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.song-title {
+    text-align: left;
+}
+.song-length {
+    text-align: right;
+}
+
+.movie-container {
+    background: RGBA(0,0,0, 0.4);
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.movie-container img {
+    width: 100%;
+    height: 80%;
+}
+
+.movie-content {
+    background: RGBA(255,255,255, 0.8);
+    margin: 1%;
+}
+
+.movie-poster {
+    margin: 1%;
+}
+
+
+.name_tag .header {
+    background: blue;
+}
+
+.name_tag {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 5%;
+    border: 1px solid black;
+}
+
+.name_tag h1 {
+    color: white;
+    font-size: 30PX;
+}
+
+
+.roll-call {
+    width: 60%;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 200px;
+    letter-spacing: 4px;
+    background: RGBA(0,0,0, .1);
+}
+
+.student-card {
+    margin: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.student-card.Present { 
+    background: green;}
+.student-card.Absent { 
+    background: red;}
+
+
+.card-holder {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+
+}
+
+.card {
+    margin: 2%;
+    height: 50px;
+    width: 500px;
+    background: transparent;
+    border: 0px solid transparent;
+}
+
+.card img {
+    margin: auto;
+    width: 100px;
+    height: 150px;
+}
+
+.restraunts {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+
+}
+
+.place {
+    margin: 2%;
+    padding: 4%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    background: RGBA(0,0,0, .2);
+}
+
+.place h1 {
+    color: green;
+}
+
+.place h3 {
+    font-weight:700;
+    font-display: bold;
+    font: bold;
+    letter-spacing: 4px;
+}
+
+.place p {
+    font-weight:500;
+    letter-spacing: 2px;
+    color: RGBA(0,0,0, .6);
+    
+}
+
+.tweet-holder {
+    width: 50%;
+    border: 1px solid black;
+    padding: 3%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.tweet-holder h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 2%;
+}
+
+.header-row h4 {
+    font-size: 16px;
+    font-weight: 200;
+    color: gray;
+}
+
+.header-row h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.tweet-holder table {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    margin-left: 10%;
+}
+
+.info {
+    text-align: left;
+    margin-left: 3%;
+}
+
+.btn-group .btn {
+    border-radius: 9999em;
+    margin: 5%;
+}
+
+.survey {
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5%;
+    padding-bottom: 2%;
+}
+
+.survey hr {
+    border-bottom: 1px solid grey;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.survey h1 {
+    margin-top: 5%;
+}
+
+.survey .field {
+    margin: 5%;
+}
+
+.survey .rado {
+    text-align: left;
+    padding: 2%;
+}
+.rado input {
+    margin: 2%;
+}
+
+.inputbox {
+    width: 100%;
+    height: 20vh;
+}

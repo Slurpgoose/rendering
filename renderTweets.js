@@ -1,10 +1,33 @@
 
 function renderTweets(tweets) {
+    result = tweets.map(element => {
+        return createTweet(element)
+    }).join("")
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(tweets)}</code>
+        ${result}
         </div>
     `
+}
+
+function createTweet(tweet) {
+    return `<div class="tweet-holder">
+        <div class="row header-row">
+<div class="image"><img src="${tweet.user.profilePic}"></img></div><div class="info"><h3>${tweet.user.username}</h3><h4>${tweet.user.handle}</h4></div>
+        </div>
+        <div class="row">
+            <h1>${tweet.text}</h1>
+            </div>
+        <div class="row">
+            <table style="width:40%">
+                <tr>
+                    <td>${tweet.replies}<i class="fa fa-retweet"></i></td>
+                    <td>${tweet.retweets}<i class="fa fa-retweet"></i></td> 
+                    <td>${tweet.likes}<i class="fa fa-retweet"></i></td>
+                </tr>
+                </table>
+            </div>
+        </div>`
 }
 
 function tweets() {

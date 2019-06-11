@@ -1,11 +1,29 @@
 
 function renderStudents(students) {
+    result = students.map(element => {
+        //alert(element.name);
+        return createStudentCard(element)}).join("")
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(students)}</code>
+        <div class="roll-call">
+        <h1>Roll Call!</h1>
+            ${result}
         </div>
     `
 }
+
+function createStudentCard(student) {
+    var status = '';
+    if(student.isPresent) {
+        status = 'Present';
+    }
+    else {
+        status = 'Absent'
+    }
+    return `<div class="student-card ${status}">
+            <h3>${student.name}</h3>
+            <h5>${status}</h5>
+            </div>`
+};
 
 function students() {
     var content = document.getElementById('content');

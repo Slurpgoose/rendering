@@ -1,10 +1,40 @@
+const PLAY_ICON =`<img class="play-icon" src="https://img.icons8.com/metro/420/play.png"></img>`
 
 function renderAlbums(albums) {
+    var artist_name;
+    var album_title;
+    albums.map(element =>{
+        artist_name = getTitle(element.artist);
+        album_title = getAlbumn(element.albums);});
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(albums)}</code>
+        <div class="main">
+        ${artist_name}
+        ${album_title}
         </div>
     `
+}
+
+function getTitle(title) {
+    return `<h1>${title}</h1>
+            <hr>`
+}
+
+function getAlbumn(artist) {
+    var albums = artist.map(element => {
+        songs = getSongs(element.songs);
+        return `<div><span><img src="${element.albumCover}"></img></span><span><h3>${element.title}</h3></span>${songs}</span></div>`}).join("");
+    return albums
+};
+
+function getSongs(album) {
+    songs = album.map(element =>{
+        return `<tr>
+        <td class="song-title"><span>${PLAY_ICON}</span>${element.title}</td>
+        <td class="song-length">${element.length}</td> 
+      </tr>`;
+    }).join("");
+    return  `<table><tr></tr>${songs}</table>`
+
 }
 
 function albums() {
